@@ -13,7 +13,7 @@ defmodule Eulixir.Problem001 do
   """
   def solve(limit) do
     1..(limit - 1)
-    |> Enum.filter(&(rem(&1, 3) == 0 || rem(&1, 5) == 0))
+    |> Enum.filter(fn n -> rem(n, 3) == 0 or rem(n, 5) == 0 end)
     |> Enum.sum
   end
 
