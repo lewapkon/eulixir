@@ -20,7 +20,7 @@ defmodule Eulixir.Problem005 do
     iex> Eulixir.Problem005.gcd(20, 25)
     5
   """
-  def gcd(a, b) when b == 0, do: a
+  def gcd(a, 0), do: a
   def gcd(a, b), do: gcd(b, rem(a, b))
 
   @doc """

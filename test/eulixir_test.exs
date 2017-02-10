@@ -6,4 +6,5 @@ defmodule EulixirTest do
   doctest Eulixir.Problem004
   doctest Eulixir.Problem005
   doctest Eulixir.Problem006
+  doctest Eulixir.Problem007
 end

@@ -26,8 +26,8 @@ defmodule Eulixir.Problem004 do
     iex> Eulixir.Problem004.pow10(3)
     1000
   """
-  def pow10(n), do: pow10(n, 1)
-  defp pow10(n, acc) when n <= 0, do: acc
+  def pow10(n) when n >= 0, do: pow10(n, 1)
+  defp pow10(0, acc), do: acc
   defp pow10(n, acc), do: pow10(n - 1, acc * 10)
 
   @doc """
