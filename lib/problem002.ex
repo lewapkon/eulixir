@@ -11,7 +11,6 @@ defmodule Eulixir.Problem002 do
   require Integer
 
   @doc """
-    ## Examples
     iex> Eulixir.Problem002.solve(80)
     44
   """

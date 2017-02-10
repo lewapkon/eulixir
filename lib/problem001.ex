@@ -7,7 +7,6 @@ defmodule Eulixir.Problem001 do
   """
 
   @doc """
-    ## Examples
     iex> Eulixir.Problem001.solve(10)
     23
   """

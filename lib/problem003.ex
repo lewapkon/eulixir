@@ -6,27 +6,31 @@ defmodule Eulixir.Problem003 do
   """
 
   @doc """
-    ## Examples
     iex> Eulixir.Problem003.solve(13_195)
     29
   """
   def solve(n) do
     n
-    |> biggest_factor
+    |> factorize
+    |> List.first
   end
 
-  defp biggest_factor(n) do
-    biggest_factor(n, 2, 1)
+  @doc """
+    iex> Eulixir.Problem003.factorize(13_195)
+    [29, 13, 7, 5]
+  """
+  def factorize(n) do
+    factorize(n, 2, [])
   end
 
-  defp biggest_factor(n, divisor, acc) when n < divisor, do: acc
+  defp factorize(n, divisor, acc) when n < divisor, do: acc
 
-  defp biggest_factor(n, divisor, _acc) when rem(n, divisor) == 0 do
-    biggest_factor(div(n, divisor), divisor, n)
+  defp factorize(n, divisor, acc) when rem(n, divisor) == 0 do
+    factorize(div(n, divisor), divisor, [divisor | acc])
   end
 
-  defp biggest_factor(n, divisor, acc) do
-    biggest_factor(n, divisor + 1, acc)
+  defp factorize(n, divisor, acc) do
+    factorize(n, divisor + 1, acc)
   end
 
   def solution do
