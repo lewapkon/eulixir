@@ -37,7 +37,7 @@ defmodule Eulixir.Problem006 do
   end
 
   def solution do
-    solve(20)
+    solve(100)
   end
 end
 
