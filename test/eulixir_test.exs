@@ -8,4 +8,5 @@ defmodule EulixirTest do
   doctest Eulixir.Problem006
   doctest Eulixir.Problem007
   doctest Eulixir.Problem008
+  doctest Eulixir.Problem009
 end
